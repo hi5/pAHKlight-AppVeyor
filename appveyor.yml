@@ -6,7 +6,7 @@ install:
 build: off
 
 before_test:
-  - cmd: cd tests
+  - cmd: cd test
 
 test_script: 
   - test.cmd
