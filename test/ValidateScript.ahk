@@ -11,6 +11,8 @@ Loop, *.ahk
     	FileAppend,*** %A_LoopFileName% ***`n Fail`n`nError: %error%`n`nWarnings:`n%warnings%`n`n------------------------------------------------`n`n, testoutput.txt
 	}
 
+Run %comspec% /c type testoutput.txt
+
 ValidateScript(path, ByRef error := "", ByRef warnings := "") {
     shell := ComObjCreate("WScript.Shell")
     exec := shell.Exec("AutoHotkey.exe /iLib NUL /ErrorStdOut *")
