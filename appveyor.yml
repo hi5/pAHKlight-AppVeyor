@@ -8,5 +8,8 @@ build: off
 before_test:
   - cmd: cd test
 
+#test_script: 
+#  - test.cmd
+
 test_script: 
-  - test.cmd
+  - test.ahk
