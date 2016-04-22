@@ -16,4 +16,4 @@ test_script:
   - ValidateScript.ahk
 
 after_test:
-  - echo testoutput.txt
+  - cmd: echo testoutput.txt
