@@ -8,7 +8,7 @@ Loop, *.ahk
 	 if (A_LoopFileName = A_ScriptName)
 	 	Continue
 	 if !ValidateScript(A_LoopFileName, error, warnings)
-	 	FileAppend,*** %A_LoopFileName% ***`n Fail`n`nError: %error%`n`nWarnings:`n%warnings%`n`n------------------------------------------------`n`n, testoutput.txt
+	 	FileAppend,*** %A_LoopFileName% ***`n Fail`n`nError: %error%`n`nWarnings:`n%warnings%`n`n------------------------------------------------`n`n, *
 	}
 
 IfExist, testoutput.txt
