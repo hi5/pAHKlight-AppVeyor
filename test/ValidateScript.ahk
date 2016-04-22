@@ -8,10 +8,13 @@ Loop, *.ahk
 	 if (A_LoopFileName = A_ScriptName)
 	 	Continue
 	 if !ValidateScript(A_LoopFileName, error, warnings)
-    	FileAppend,*** %A_LoopFileName% ***`n Fail`n`nError: %error%`n`nWarnings:`n%warnings%`n`n------------------------------------------------`n`n, testoutput.txt
+	 	FileAppend,*** %A_LoopFileName% ***`n Fail`n`nError: %error%`n`nWarnings:`n%warnings%`n`n------------------------------------------------`n`n, testoutput.txt
 	}
 
-Run %comspec% /c type testoutput.txt
+IfExist, testoutput.txt
+	ExitCode:=1
+
+ExitApp, %ExitCode%
 
 ValidateScript(path, ByRef error := "", ByRef warnings := "") {
     shell := ComObjCreate("WScript.Shell")
