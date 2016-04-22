@@ -16,4 +16,4 @@ test_script:
   - ValidateScript.ahk
 
 after_build:
-  - type testoutput.txt
+  - type testoutput.txt 2>&1
