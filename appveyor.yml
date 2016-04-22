@@ -14,3 +14,6 @@ before_test:
 # you can call ahk script it seems
 test_script: 
   - ValidateScript.ahk
+
+after_build:
+  - type testoutput.txt
