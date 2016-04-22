@@ -13,4 +13,4 @@ before_test:
 
 # you can call ahk script it seems
 test_script: 
-  - test.ahk
+  - ValidateScript.ahk
