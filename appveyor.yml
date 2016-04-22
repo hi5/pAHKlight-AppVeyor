@@ -15,5 +15,5 @@ before_test:
 test_script: 
   - ValidateScript.ahk
 
-after_build:
+after_test:
   - echo testoutput.txt
