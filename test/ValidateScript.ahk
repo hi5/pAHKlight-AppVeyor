@@ -5,8 +5,10 @@ SetWorkingDir, %A_ScriptDir%
 
 Loop, *.ahk
 	{
+	 if (A_LoopFileName = A_ScriptName)
+	 	Continue
 	 if !ValidateScript(A_LoopFileName, error, warnings)
-    	FileAppend, *** %A_LoopFileName% ***`n Fail`n`nError: %error%`n`nWarnings:`n%warnings%`n`n------------------------------------------------`n`n, *
+    	FileAppend,*** %A_LoopFileName% ***`n Fail`n`nError: %error%`n`nWarnings:`n%warnings%`n`n------------------------------------------------`n`n, testoutput.txt
 	}
 
 ValidateScript(path, ByRef error := "", ByRef warnings := "") {
