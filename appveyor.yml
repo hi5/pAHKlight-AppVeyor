@@ -15,5 +15,5 @@ before_test:
 test_script: 
   - v.cmd
 
-#after_test:
-#  - cmd: echo testoutput.txt
+after_test:
+  - cmd: type testoutput.txt
