@@ -8,7 +8,7 @@ global errorcode := 0
 Tests
 */
 
-FileRead, data, %A_ScriptFullPath%
+FileRea, data, %A_ScriptFullPath%
 
 Loop, parse, data, `n, `r
 	counter++
