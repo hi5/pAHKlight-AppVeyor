@@ -25,6 +25,6 @@ on_success:
   - git checkout master
   - git status
   - git add av.md
-  - git commit -a -m "updating"
+  - git commit -a -m "updating [skip appveyor]"
   - git remote -v
   - git push -v origin master
