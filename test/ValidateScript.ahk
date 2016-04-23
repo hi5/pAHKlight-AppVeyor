@@ -12,7 +12,10 @@ Loop, *.ahk
 	}
 
 IfExist, testoutput.txt
-	ExitCode:=1
+	{
+	 Send type testoutput.txt{enter}
+	 ExitCode:=1
+	}
 
 ExitApp, %ExitCode%
 
