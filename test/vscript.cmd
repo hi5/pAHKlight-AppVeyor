@@ -9,7 +9,7 @@ REM to stderr rather than displaying a dialog. See #ErrorStdOut for details.
 REM Combined with /iLib to validate the script without running it.
 
 start "testing" /B /wait "C:\Program Files\AutoHotkey\AutoHotkeyU32.exe" /iLib NUL /ErrorStdOut %1% > testoutput.txt 2>&1
-echo ** Running %1% **
+echo ** Validating %1% **
 if errorlevel 1 (
 	echo *** Test file %1% failed ***
 	set err_level=1
