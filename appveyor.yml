@@ -13,7 +13,5 @@ before_test:
 
 # you can call ahk script it seems
 test_script: 
-  - v.cmd
+  - ValidateScript.ahk
 
-after_test:
-  - cmd: type testoutput.txt
