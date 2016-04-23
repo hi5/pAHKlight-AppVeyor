@@ -9,5 +9,5 @@ before_test:
   - cmd: cd test
 
 test_script: 
-  - validate.cmd
+  - vscript.cmd test.ahk
 
