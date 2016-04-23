@@ -17,6 +17,7 @@ test_script:
 #  - vscript.cmd test.ahk
 
 on_success:
+  - cd ..
   - git config --global credential.helper store
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
   - git config --global user.email "hi5ghub@gmail.com"
