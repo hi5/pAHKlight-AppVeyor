@@ -8,10 +8,6 @@ build: off
 before_test:
   - cmd: cd test
 
-#test_script: 
-#  - test.cmd
-
-# you can call ahk script it seems
 test_script: 
-  - ValidateScript.ahk
+  - validate.cmd
 
