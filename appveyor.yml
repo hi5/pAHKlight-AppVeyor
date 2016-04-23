@@ -22,4 +22,5 @@ on_success:
   - git config --global user.email "hi5ghub@gmail.com"
   - git config --global user.name "hi5"
   - git commit -a -m "updating"
+  - git remote -v
   - git push origin master
