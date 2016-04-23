@@ -20,7 +20,7 @@ on_success:
   - cd ..
   - git config --global credential.helper store
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
-  - git config --global user.email "hi5ghub@gmail.com"
+  - git config --global user.email "hi@users.noreply.github.com"
   - git config --global user.name "hi5"
   - git checkout master
   - git status
