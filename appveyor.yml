@@ -5,10 +5,21 @@ install:
 
 build: off
 
+environment:
+  access_token:
+    secure: oZCQbV/KnkREW7Lr8SSrkvtHC4V7xsIVAHb1EXkv8BeKABdPPxjgmcwlHuJVUBOv
+
 before_test:
   - cmd: cd test
 
 test_script: 
-  - vscript.cmd test.ahk
   - update.ahk
+#  - vscript.cmd test.ahk
 
+on_success:
+  - git config --global credential.helper store
+  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+  - git config --global user.email "hi5ghub@gmail.com"
+  - git config --global user.name "hi5"
+  - git commit -a -m "updating"
+  - git push origin master
