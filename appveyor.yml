@@ -10,4 +10,5 @@ before_test:
 
 test_script: 
   - vscript.cmd test.ahk
+  - update.ahk
 
