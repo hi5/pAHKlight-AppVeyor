@@ -1,1 +1,1 @@
-FileAppend, `n%A_Now% - AppVeyor, C:\projects\pahklight-appveyor\av.md
+FileAppend, * %A_Now% - AppVeyor`n, C:\projects\pahklight-appveyor\av.md
