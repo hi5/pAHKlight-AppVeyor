@@ -2,7 +2,7 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/vqio4aattnhb462u?svg=true)](https://ci.appveyor.com/project/hi5/pahklight-appveyor)
 
-AppVeyor test repo
+AppVeyor test repo.
 
 ### AppVeyor + AHK info here:
 
